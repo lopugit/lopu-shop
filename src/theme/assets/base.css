@@ -1,20 +1,5 @@
 /* Color custom properties */
 
-@import "base-fonts.css";
-
-.newsscroll {
-  animation: newsScroll 30s linear infinite;
-}
-
-@keyframes newsScroll {
-  0% {
-    transform: translateX(100vw);
-  }
-  100% {
-    transform: translateX(-90vw);
-  }
-}
-
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);
@@ -649,6 +634,8 @@ h6:empty {
   display: inline-block;
   border: none;
   box-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
   font-size: 1.4rem;
@@ -742,14 +729,16 @@ details > * {
   --duration-long: 500ms;
 }
 
-.underlined-link {
+.underlined-link,
+.customer a {
   color: rgba(var(--color-link), var(--alpha-link));
   text-underline-offset: 0.3rem;
   text-decoration-thickness: 0.1rem;
   transition: text-decoration-thickness ease 100ms;
 }
 
-.underlined-link:hover {
+.underlined-link:hover,
+.customer a:hover {
   color: rgb(var(--color-link));
   text-decoration-thickness: 0.2rem;
 }
@@ -1516,6 +1505,8 @@ details[open] > .share-button__fallback {
 }
 
 .share-button__button:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
 }
 
 .share-button__button,
@@ -2688,12 +2679,16 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item:hover span {
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
 }
 
 details[open] > .header__menu-item {
+  text-decoration: underline;
 }
 
 details[open]:hover > .header__menu-item {
+  text-decoration-thickness: 0.2rem;
 }
 
 details[open] > .header__menu-item .icon-caret {
@@ -2703,6 +2698,8 @@ details[open] > .header__menu-item .icon-caret {
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
 }
 
 .header__menu-item:hover .header__active-menu-item {
