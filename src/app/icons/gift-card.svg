@@ -1,0 +1,5 @@
+<svg viewBox="0 0 32 32">
+  <g fill="none" stroke="#111" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2">
+    <path d="M1 10h30M1 15h30M5 21h7M25 21h2M1 25V7c0-1.105.895-2 2-2h26c1.105 0 2 .895 2 2v18c0 1.105-.895 2-2 2H3c-1.105 0-2-.895-2-2z"/>
+  </g>
+</svg>
