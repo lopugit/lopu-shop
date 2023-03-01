@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pull": "cd src && shopify theme pull --store lopu-shop",
+    "pull": "cd src/theme && shopify theme pull --store lopu-shop",
     "dev": "shopify theme dev --path=src/theme",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
