@@ -525,20 +525,12 @@ video {
   display: flex;
 }
 
-.xw-full {
-  width: 100%;
-}
-
 .xflex-row {
   flex-direction: row;
 }
 
 .xitems-center {
   align-items: center;
-}
-
-.xjustify-center {
-  justify-content: center;
 }
 
 .xoverflow-hidden {
