@@ -19,7 +19,7 @@ module.exports = {
       },
     },
     colors: {
-      green: "#FDE516",
+      yellow: "#FDE516",
       purple: "#A416FD",
       white: "#FFFFFF",
       black: "#000000",
