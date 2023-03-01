@@ -1,0 +1,12 @@
+{
+  "name": "lopu-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pull": "cd src && shopify theme pull --store lopu-shop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
