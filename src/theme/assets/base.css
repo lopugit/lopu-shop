@@ -11,7 +11,7 @@
     transform: translateX(100vw);
   }
   100% {
-    transform: translateX(-90vw);
+    transform: translateX(-100%);
   }
 }
 
