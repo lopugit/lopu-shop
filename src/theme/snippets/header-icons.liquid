@@ -97,13 +97,7 @@
   {%- endif -%}
 
   <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-    {%- liquid
-      if cart == empty
-        render 'icon-cart-empty'
-      else
-        render 'icon-cart'
-      endif
-    -%}
+    <img src="{{ "meso_bag.png" | asset_url }}" width="32" height="auto" />
     <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
     {%- if cart != empty -%}
       <div class="cart-count-bubble">

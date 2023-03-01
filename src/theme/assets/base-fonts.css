@@ -1,5 +1,5 @@
-/* Create and import fontface font from Pixeled.ttf */
+/* Create and import fontface font from DePixelBreit.ttf */
 @font-face {
-  font-family: 'Pixeled';
-  src: url('assets/DePixelBreit.ttf');
+  font-family: 'DePixelBreit';
+  src: url('DePixelBreit.ttf');
 }

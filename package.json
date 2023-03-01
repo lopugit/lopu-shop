@@ -5,21 +5,28 @@
   "main": "index.js",
   "scripts": {
     "pull": "cd src/theme && shopify theme pull --store lopu-shop",
-    "dev": "shopify theme dev --path=src/theme",
+    "dev": "npm run dev:tailwind & npm run dev:shopify",
+    "dev:shopify": "shopify theme dev --path=src/theme",
+    "dev:tailwind": "TAILWIND_MODE=watch npx tailwindcss --watch -i ./src/theme/assets/tailwind.css -o ./src/theme/assets/tailwind.output.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "run-p": "^0.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
+    "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
     "core-js": "^3.29.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.2.7",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
     "webpack-merge": "^5.8.0"

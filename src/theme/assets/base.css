@@ -2,6 +2,19 @@
 
 @import "base-fonts.css";
 
+.newsscroll {
+  animation: newsScroll 30s linear infinite;
+}
+
+@keyframes newsScroll {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-90vw);
+  }
+}
+
 :root,
 .color-background-1 {
   --color-foreground: var(--color-base-text);
