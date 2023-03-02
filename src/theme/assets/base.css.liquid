@@ -3,8 +3,15 @@
 @import "base-fonts.css";
 
 .newsscroll {
-  animation: newsScroll 30s linear infinite;
+  animation: newsScroll 18s linear infinite;
 }
+
+@media(min-width: 750px) {
+  .newsscroll {
+    animation: newsScroll 30s linear infinite;
+  }
+}
+
 
 @keyframes newsScroll {
   0% {

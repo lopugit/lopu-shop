@@ -7,19 +7,19 @@
       aria-label="{{ 'sections.header.announcement' | t }}"
       {{ block.shopify_attributes }}>
       <div class="xflex">
-        <p class="announcement-bar__message newsscroll xw-auto xpy-2 xtext-white xtext-sm xflex xflex-row xitems-center {{ block.settings.text_alignment }} h5">
+        <div class="announcement-bar__message newsscroll xwhitespace-nowrap xw-auto xpy-2 xtext-white xtext-sm xflex xflex-row xitems-center {{ block.settings.text_alignment }} h5">
           <img
             src="{{ "scania.png" | asset_url }}"
             class="xmb-1 xmr-2"
             width="14"
             height="auto" />
-          <span style="line-height: 1">Welcome to Lopu's Shop. Here you'll find only the best and brightest of gifts and possessions. Happy shopping! </span>
+          <div style="line-height: 1" class="xwhitespace-nowrap">Welcome to Lopu's Shop. Here you'll find only the best and brightest of gifts and possessions. Happy shopping! </div>
           <img
             src="{{ "lopulove.png" | asset_url }}"
             class="xmb-1 xmr-2"
             width="14"
             height="auto" />
-        </p>
+        </div>
       </div>
     </div>
   {%- endcase -%}
