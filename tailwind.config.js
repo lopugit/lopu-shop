@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   prefix: 'x',
   mode: 'jit',
   content: [
@@ -27,3 +27,5 @@ module.exports = {
   },
   plugins: [],
 }
+
+module.exports = config
