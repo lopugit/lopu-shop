@@ -49,7 +49,7 @@ window.ProductModel = {
       window.ShopifyXR.addModels(JSON.parse(modelJSON.textContent));
       modelJSON.remove();
     });
-    window.ShopifyXR.setupXRElements();
+    window.ShopifyXR.setupx-relements();
   },
 };
 

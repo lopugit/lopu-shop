@@ -100,9 +100,9 @@
     <img src="{{ "meso_bag.png" | asset_url }}" width="32" height="auto" />
     <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
     {%- if cart != empty -%}
-      <div class="xabsolute xbg-purple xrounded-full xh-8 xw-8 xleft-12 xtop-0">
+      <div class="x-absolute x-bg-purple xrounded-full x-h-8 x-w-8 xleft-12 xtop-0">
         {%- if cart.item_count < 100 -%}
-          <span aria-hidden="true" class="xpl-1 xpt-1">{{ cart.item_count }}</span>
+          <span aria-hidden="true" class="x-pl-1 x-pt-1">{{ cart.item_count }}</span>
         {%- endif -%}
         <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
       </div>

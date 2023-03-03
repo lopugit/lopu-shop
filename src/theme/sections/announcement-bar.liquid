@@ -2,22 +2,25 @@
   {%- case block.type -%}
     {%- when 'announcement' -%}
     <div
-      class="announcement-bar xoverflow-hidden xbg-purple color-{{ block.settings.color_scheme }} gradient"
+      class="announcement-bar x-overflow-hidden x-bg-purple color-{{ block.settings.color_scheme }} gradient"
       role="region"
       aria-label="{{ 'sections.header.announcement' | t }}"
       {{ block.shopify_attributes }}>
-      <div class="xflex">
-        <div class="announcement-bar__message newsscroll xwhitespace-nowrap xw-auto xpy-2 xtext-white xtext-sm xflex xflex-row xitems-center {{ block.settings.text_alignment }} h5">
+      <div class="x-flex">
+        <div class="
+          announcement-bar__message newsscroll x-whitespace-nowrap 
+          x-w-auto x-py-2 x-text-white x-text-sm x-flex x-flex-row 
+          x-items-center {{ block.settings.text_alignment }} h5">
           <img
             src="{{ "scania.png" | asset_url }}"
-            class="xmb-1 xmr-2"
+            class="x-mb-1 x-mr-2"
             width="14"
             height="auto" />
-          <div style="line-height: 1" class="xwhitespace-nowrap">Welcome to Lopu's Shop. Here you'll find only the best and brightest of gifts and possessions. Happy shopping! </div>
+          <div style="line-height: 1" class="x-whitespace-nowrap x-text-white">Welcome to Lopu's Shop. Here you'll find only the best and brightest of gifts and possessions. Happy shopping! </div>
           <img
             src="{{ "lopulove.png" | asset_url }}"
-            class="xmb-1 xmr-2"
-            width="14"
+            class="x-mb-1 x-mr-2"
+            width="18"
             height="auto" />
         </div>
       </div>

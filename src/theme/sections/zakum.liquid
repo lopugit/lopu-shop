@@ -1,9 +1,27 @@
-<div class="xflex xitems-center xjustify-center xbg-black">
+<div class="x-h-800px x-overflow-hidden x-max-w-full md:x-h-950px x-flex x-relative x-items-center x-justify-center x-bg-black">
   <img 
-    src="{{ "Zakum Altar.png" | asset_url }}"
+    src="{{ "Zakum Altar Extended.png" | asset_url }}"
+    class=" x-object-cover x-h-full"
     width="auto"
     height="auto"
     />
+  <div class="x-absolute x-flex x-flex-row x-justify-center x-pt-28 xleft-0 xtop-0 x-w-full x-h-full">
+    <div class="x-flex x-flex-col x-max-w-full x-items-center">
+      <div class="x-font-zakum x-text-90px md:x-text-150px x-text-brown">ZAKUM</div>
+      <div class="
+        x-flex x-flex-row x-pt-25p md:x-pt-3p 
+        md:x-justify-center x-max-w-full x-overflow-scroll
+      ">
+        {%- for product in section.settings.collection.products -%}
+          <div class="x-px-8 x-flex-shrink-0 x-w-80p md:x-w-auto">
+            {% render 'product-card',
+              product: product
+            %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% schema %}
@@ -15,6 +33,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
   ],
   "presets": [
     {
