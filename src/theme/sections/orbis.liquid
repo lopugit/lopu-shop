@@ -1,0 +1,48 @@
+<div class="x-h-800px md:x-h-1100px x-overflow-hidden x-max-w-full x-flex x-relative x-items-center x-justify-center x-bg-black">
+  <img 
+    src="{{ "Orbis Boat Extended W Enemy.png" | asset_url }}"
+    class=" x-object-cover x-h-full x-w-full"
+    width="auto"
+    height="auto"
+    />
+  <div class="x-absolute x-flex x-flex-row x-justify-center x-pt-28 xleft-0 xtop-0 x-w-full x-h-full">
+    <div class="x-flex x-flex-col x-max-w-full x-items-center">
+      <div class="x-font-orbis x-text-90px md:x-text-110px x-text-white">ORBIS</div>
+      <div class="
+        x-flex x-flex-row x-pt-25p md:x-pt-20p 
+        md:x-justify-center x-max-w-full x-overflow-scroll
+      ">
+        {%- for product in section.settings.collection.products -%}
+          <div class="x-px-8 x-flex-shrink-0 x-w-80p md:x-w-auto">
+            {% render 'product-card',
+              product: product
+            %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Orbis",
+  "tag": "section",
+  "class": "orbis-section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Orbis"
+    }
+  ]
+}
+{% endschema %}
