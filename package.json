@@ -6,7 +6,7 @@
   "scripts": {
     "pull": "cd src/theme && shopify theme pull --store lopu-shop",
     "dev": "npm run dev:tailwind & npm run dev:shopify",
-    "dev:shopify": "shopify theme dev --path=src/theme",
+    "dev:shopify": "shopify theme dev --store=lopu-shop --path=src/theme",
     "dev:tailwind": "TAILWIND_MODE=watch npx tailwindcss --watch -i ./src/theme/assets/tailwind.css -o ./src/theme/assets/tailwind.output.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
