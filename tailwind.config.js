@@ -25,6 +25,8 @@ const config = {
     colors: {
       yellow: "#FDE516",
       green: "#00FF00",
+      green2: "#A2FB64",
+      green3: "#45BF53",
       lava: "#FF7B1C",
       lightbrown: "#FFD9A7",
       brown2: "#A76B40",

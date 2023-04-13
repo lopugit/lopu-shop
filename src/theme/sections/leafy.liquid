@@ -1,18 +1,19 @@
-<div class="x-h-800px md:x-h-1400px x-overflow-hidden x-max-w-full  x-flex x-relative x-justify-center x-bg-black">
+<div class="x-h-800px md:x-h-1100px x-overflow-hidden x-max-w-full x-flex x-relative x-items-center x-justify-center x-bg-black">
   <img 
-    src="{{ "Zakum Altar Extended.png" | asset_url }}"
-    class="x-object-cover x-object-top x-min-w-full x-min-h-full"
+    src="{{ "Leafy BG.png" | asset_url }}"
+    class=" x-object-cover x-h-full x-w-full"
+    width="auto"
+    height="auto"
     />
-  <div class="x-absolute x-flex x-px-8 x-flex-row x-justify-center x-pt-28 xleft-0 xtop-0 x-w-full x-h-full">
+  <div class="x-absolute x-flex x-flex-row x-justify-center x-pt-28 xleft-0 xtop-0 x-w-full x-h-full">
     <div class="x-flex x-flex-col x-max-w-full x-items-center">
       <div 
-        style="text-shadow: 10px 10px 0px #2E2E2E"
-        class="x-font-zakum x-text-90px md:x-text-150px x-text-white"
-      >ZAKUM</div>
-
+        style="text-shadow: 4px 4px 0px #45BF53"
+        class="x-font-leafy x-text-90px md:x-text-110px x-text-green2"
+      >LEAFY</div>
       <div class="
-        x-flex x-flex-row x-pt-12p md:x-pt-20p 
-        x-max-w-full x-overflow-scroll
+        x-flex x-flex-row x-pt-25p md:x-pt-20p 
+        md:x-justify-center x-max-w-full x-overflow-scroll
       ">
         {%- for product in section.settings.collection.products -%}
           <div class="x-px-8 x-flex-shrink-0 x-w-80p md:x-w-auto">
@@ -28,9 +29,9 @@
 
 {% schema %}
 {
-  "name": "Zakum",
+  "name": "Leafy",
   "tag": "section",
-  "class": "zakum-section",
+  "class": "leafy-section",
   "disabled_on": {
     "groups": ["header", "footer"]
   },
@@ -43,7 +44,7 @@
   ],
   "presets": [
     {
-      "name": "Zakum"
+      "name": "Leafy"
     }
   ]
 }
