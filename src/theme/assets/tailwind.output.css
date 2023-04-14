@@ -748,6 +748,22 @@ video {
   padding-top: 12%;
 }
 
+.x-pt-40 {
+  padding-top: 10rem;
+}
+
+.x-pt-48 {
+  padding-top: 12rem;
+}
+
+.x-pt-52 {
+  padding-top: 13rem;
+}
+
+.x-pt-60 {
+  padding-top: 15rem;
+}
+
 .x-font-zakum {
   font-family: Zakum;
 }
