@@ -3,16 +3,32 @@
     "2fb8c7e8-a36a-4bea-a692-4fb521566180": {
       "type": "zakum",
       "settings": {
+        "collection": "zakum"
+      }
+    },
+    "0c875851-cd14-4d76-bedc-9f9c3c076cc9": {
+      "type": "leafy",
+      "settings": {
+        "collection": "leafy"
       }
     },
     "92da3b57-8782-47fc-b3d0-bd49b0190b56": {
       "type": "grendel",
       "settings": {
+        "collection": ""
+      }
+    },
+    "e99c037b-029a-4d6a-89bb-43b2b4049f77": {
+      "type": "orbis",
+      "settings": {
+        "collection": ""
       }
     }
   },
   "order": [
     "2fb8c7e8-a36a-4bea-a692-4fb521566180",
-    "92da3b57-8782-47fc-b3d0-bd49b0190b56"
+    "0c875851-cd14-4d76-bedc-9f9c3c076cc9",
+    "92da3b57-8782-47fc-b3d0-bd49b0190b56",
+    "e99c037b-029a-4d6a-89bb-43b2b4049f77"
   ]
 }
