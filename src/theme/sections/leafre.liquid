@@ -13,7 +13,7 @@
     <div class="x-flex x-flex-col x-max-w-full x-items-center">
       <div 
         style="text-shadow: 10px 10px 0px #2E2E2E"
-        class="x-font-magic x-text-50px md:x-text-120px lg:x-text-150px x-text-white"
+        class="x-font-magical x-text-50px md:x-text-70px x-text-white"
       >Leafre</div>
 
       <div 
@@ -53,7 +53,7 @@
           src="{{ "ArrowLeft.png" | asset_url }}"
           class="x-cursor-pointer x-mr-2"
           id="leafre-left-arrow-{{id}}"
-          onclick="moveLeft({{id}})"
+          onclick="moveLeftLeafre({{id}})"
           width="auto"
           height="auto"
         />
@@ -73,12 +73,12 @@
           src="{{ "ArrowRight.png" | asset_url }}"
           class="x-cursor-pointer x-ml-2"
           id="leafre-right-arrow-{{id}}"
-          onclick="moveRight({{id}})"
+          onclick="moveRightLeafre({{id}})"
           width="auto"
           height="auto"
         />
         <script>
-          function moveLeft(id) {
+          function moveLeftLeafre(id) {
             let el = document.getElementById("leafre-product-container-"+id)
             let pel = document.getElementsByClassName("leafre-product-card")?.[0]
             if (el) {
@@ -91,7 +91,7 @@
               })
             }
           }
-          function moveRight(id) {
+          function moveRightLeafre(id) {
             let el = document.getElementById("leafre-product-container-"+id)
             let pel = document.getElementsByClassName("leafre-product-card")?.[0]
             if (el) {
