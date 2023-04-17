@@ -1,117 +1,45 @@
 {% assign id = "now" | date: "%N" | modulo: 1000 | plus: 0 %}
 <div 
   class="
+    x-bg-llgray
     x-overflow-hidden x-max-w-full x-flex 
     x-relative x-justify-center x-bg-black
   "
 >
-  <div class="x-flex x-bg-white x-flex-row x-justify-center x-w-full x-h-full">
+  <div class="x-flex x-flex-row x-justify-center x-w-full x-h-full">
     <div class="x-flex x-flex-col x-w-full x-max-w-full x-items-center">
       <div
-        style="
-          background-image: url({{ "Zakum Altar Extended.png" | asset_url }});
-          image-rendering: pixelated;
-        "
-        class="
-          x-w-full x-flex x-items-center x-justify-center
-          x-bg-center x-bg-no-repeat x-bg-cover
-          x-pt-30 md:x-pt-20 x-pb-30 md:x-pb-160
-        "
+        class="x-w-full x-p-8"
       >
-        <div 
-          style="text-shadow: 10px 10px 0px #2E2E2E"
-          class="x-font-zakum x-text-50px md:x-text-120px x-text-white"
-        >ZAKUM</div>
+        <div
+          style="
+            background-image: url({{ "Zakum Altar Extended.png" | asset_url }});
+            image-rendering: pixelated;
+          "
+          class="
+            x-w-full x-h-400px md:x-h-600px 
+            x-flex x-items-center x-justify-center
+            x-bg-center x-bg-no-repeat x-bg-cover
+          "
+        >
+          <div 
+            style="text-shadow: 10px 10px 0px #2E2E2E"
+            class="x-font-zakum x-text-50px md:x-text-60px x-text-white"
+          >ZAKUM</div>
+        </div>
       </div>
-      <div 
-        id="zakum-product-container-{{id}}"
+      <div
         class="
-          x-flex x-flex-row
+          x-grid x-grid-cols-2 md:x-grid-cols-4 x-gap-30px
           x-w-1100px
-          x-pt-30 md:x-pt-60 x-max-w-full
-          x-overflow-x-scroll
+          x-pt-30 md:x-pt-15 x-pb-30 md:x-pb-15 x-max-w-full
         "
       >
         {%- for product in section.settings.collection.products -%}
-          <div
-            class="
-              zakum-product-card
-              x-max-w-full
-              x-w-80p md:x-w-300px
-              x-shrink-0
-              x-mr-40px
-              last:x-mr-0
-            "
-          >
-            {% render 'product-card',
-              product: product
-            %}
-          </div>
+          {% render 'product-card',
+            product: product
+          %}
         {% endfor %}
-      </div>
-      <div
-        class="
-          x-flex x-flex-row x-w-full
-          x-justify-center
-          x-pt-30 md:x-pt-60
-        "
-      >
-        <img 
-          src="{{ "ArrowLeft.png" | asset_url }}"
-          class="x-cursor-pointer x-mr-2"
-          id="zakum-left-arrow-{{id}}"
-          onclick="moveLeft({{id}})"
-          width="auto"
-          height="auto"
-        />
-        <a href="{{ section.settings.collection.url }}">
-          <div
-            class="
-              x-flex x-flex-row x-items-center x-justify-center
-              x-px-6 x-py-3
-              x-rounded-lg
-              x-border x-border-buttongray
-              x-bg-white x-text-black x-text-12px
-              x-cursor-pointer
-            "
-          >VIEW ALL</div>
-        </a>
-        <img 
-          src="{{ "ArrowRight.png" | asset_url }}"
-          class="x-cursor-pointer x-ml-2"
-          id="zakum-right-arrow-{{id}}"
-          onclick="moveRight({{id}})"
-          width="auto"
-          height="auto"
-        />
-        <script>
-          function moveLeft(id) {
-            let el = document.getElementById("zakum-product-container-"+id)
-            let pel = document.getElementsByClassName("zakum-product-card")?.[0]
-            if (el) {
-              let style = pel.currentStyle || window.getComputedStyle(pel)
-              let margin = parseFloat(style.marginRight)
-              let width = (pel?.offsetWidth || 300) + margin
-              el.scrollTo({
-                behavior: 'smooth',
-                left: el.scrollLeft - width || 0
-              })
-            }
-          }
-          function moveRight(id) {
-            let el = document.getElementById("zakum-product-container-"+id)
-            let pel = document.getElementsByClassName("zakum-product-card")?.[0]
-            if (el) {
-              let style = pel.currentStyle || window.getComputedStyle(pel)
-              let margin = parseFloat(style.marginRight)
-              let width = (pel?.offsetWidth || 300) + margin
-              el.scrollTo({
-                behavior: 'smooth',
-                left: el.scrollLeft + width
-              })
-            }
-          }
-        </script>
       </div>
     </div>
   </div>

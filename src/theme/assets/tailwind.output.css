@@ -573,6 +573,10 @@ video {
   display: grid;
 }
 
+.x-h-600px {
+  height: 600px;
+}
+
 .x-h-8 {
   height: 2rem;
 }
@@ -583,6 +587,10 @@ video {
 
 .x-h-full {
   height: 100%;
+}
+
+.x-h-400px {
+  height: 400px;
 }
 
 .x-w-1100px {
@@ -653,13 +661,8 @@ video {
   justify-content: center;
 }
 
-.x-gap-x-10 {
-  -moz-column-gap: 2.5rem;
-       column-gap: 2.5rem;
-}
-
-.x-gap-y-10 {
-  row-gap: 2.5rem;
+.x-gap-30px {
+  gap: 30px;
 }
 
 .x-overflow-hidden {
@@ -694,10 +697,6 @@ video {
   border-width: 2px;
 }
 
-.x-border-3 {
-  border-width: 3px;
-}
-
 .x-border-buttongray {
   --tw-border-opacity: 1;
   border-color: rgb(202 202 205 / var(--tw-border-opacity));
@@ -711,6 +710,11 @@ video {
 .x-bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.x-bg-lightgray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 229 229 / var(--tw-bg-opacity));
 }
 
 .x-bg-purple {
@@ -728,16 +732,21 @@ video {
   background-color: rgb(253 229 22 / var(--tw-bg-opacity));
 }
 
+.x-bg-llgray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
+}
+
 .x-bg-cover {
   background-size: cover;
 }
 
-.x-bg-top {
-  background-position: top;
-}
-
 .x-bg-center {
   background-position: center;
+}
+
+.x-bg-top {
+  background-position: top;
 }
 
 .x-bg-no-repeat {
@@ -756,6 +765,10 @@ video {
 
 .x-p-3 {
   padding: 0.75rem;
+}
+
+.x-p-8 {
+  padding: 2rem;
 }
 
 .x-px-5 {
@@ -795,10 +808,6 @@ video {
   padding-top: 0.25rem;
 }
 
-.x-pt-12p {
-  padding-top: 12%;
-}
-
 .x-pt-25p {
   padding-top: 25%;
 }
@@ -809,18 +818,6 @@ video {
 
 .x-pt-30 {
   padding-top: 7.5rem;
-}
-
-.x-pt-40 {
-  padding-top: 10rem;
-}
-
-.x-pt-60 {
-  padding-top: 15rem;
-}
-
-.x-font-magical {
-  font-family: Magical;
 }
 
 .x-font-zakum {
@@ -885,6 +882,10 @@ video {
     height: 900px;
   }
 
+  .md\:x-h-600px {
+    height: 600px;
+  }
+
   .md\:x-w-300px {
     width: 300px;
   }
@@ -893,21 +894,12 @@ video {
     width: auto;
   }
 
-  .md\:x-grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .md\:x-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:x-justify-center {
     justify-content: center;
-  }
-
-  .md\:x-gap-x-20 {
-    -moz-column-gap: 5rem;
-         column-gap: 5rem;
-  }
-
-  .md\:x-gap-y-40 {
-    row-gap: 10rem;
   }
 
   .md\:x-py-8 {
@@ -915,12 +907,16 @@ video {
     padding-bottom: 2rem;
   }
 
+  .md\:x-pb-15 {
+    padding-bottom: 3.75rem;
+  }
+
   .md\:x-pb-60 {
     padding-bottom: 15rem;
   }
 
-  .md\:x-pt-14p {
-    padding-top: 14%;
+  .md\:x-pt-15 {
+    padding-top: 3.75rem;
   }
 
   .md\:x-pt-20p {
@@ -935,32 +931,16 @@ video {
     padding-top: 15rem;
   }
 
-  .md\:x-pt-100 {
-    padding-top: 25rem;
-  }
-
-  .md\:x-pt-20 {
-    padding-top: 5rem;
-  }
-
-  .md\:x-pb-100 {
-    padding-bottom: 25rem;
-  }
-
-  .md\:x-pb-120 {
-    padding-bottom: 30rem;
-  }
-
-  .md\:x-pb-160 {
-    padding-bottom: 40rem;
-  }
-
   .md\:x-text-110px {
     font-size: 110px;
   }
 
   .md\:x-text-120px {
     font-size: 120px;
+  }
+
+  .md\:x-text-60px {
+    font-size: 60px;
   }
 }
 
