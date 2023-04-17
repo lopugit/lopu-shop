@@ -1,32 +1,110 @@
-<div class="x-h-800px md:x-h-1100px x-overflow-hidden x-max-w-full x-flex x-relative x-items-center x-justify-center x-bg-black">
-  {% comment %} <img 
-    src="{{ "Leafre BG.png" | asset_url }}"
-    class=" x-object-cover x-h-full x-w-full"
-    width="auto"
-    height="auto"
-    /> {% endcomment %}
-  <img 
-    src="{{ "LeafreBackground.png" | asset_url }}"
-    class=" x-object-cover x-object-top x- x-h-full x-w-full"
-    width="auto"
-    height="auto"
-    />
-  <div class="x-absolute x-flex x-flex-row x-justify-center x-pt-40 xleft-0 xtop-0 x-w-full x-h-full">
+{% assign id = "now" | date: "%N" | modulo: 1000 | plus: 0 %}
+<div 
+  style="
+    background-image: url({{ "LeafreBackground.png" | asset_url }});
+    image-rendering: pixelated;"
+  class="
+    x-bg-top x-bg-no-repeat x-bg-cover
+    x-overflow-hidden x-max-w-full x-flex 
+    x-relative x-justify-center x-bg-black
+  "
+>
+  <div class="x-flex x-px-8 x-flex-row x-justify-center x-pt-30 md:x-pt-60 x-pb-30 md:x-pb-60 x-w-full x-h-full">
     <div class="x-flex x-flex-col x-max-w-full x-items-center">
       <div 
-        style="text-shadow: 5px 5px 0px #0E5803"
-        class="x-font-magical x-text-90px md:x-text-120px x-text-white"
+        style="text-shadow: 10px 10px 0px #2E2E2E"
+        class="x-font-magic x-text-50px md:x-text-120px lg:x-text-150px x-text-white"
       >Leafre</div>
-      <div class="
-        x-pt-12p md:x-pt-14p x-max-w-full
-        x-grid x-grid-cols-2 x-gap-x-10 x-gap-y-10
-        md:x-grid-cols-3 md:x-gap-y-40 md:x-gap-x-20
-      ">
+
+      <div 
+        id="leafre-product-container-{{id}}"
+        class="
+          x-flex x-flex-row
+          x-w-1100px
+          x-pt-30 md:x-pt-60 x-max-w-full
+          x-overflow-x-scroll
+        "
+      >
         {%- for product in section.settings.collection.products -%}
-          {% render 'product-card',
-            product: product
-          %}
+          <div
+            class="
+              leafre-product-card
+              x-max-w-full
+              x-w-80p md:x-w-300px
+              x-shrink-0
+              x-mr-40px
+              last:x-mr-0
+            "
+          >
+            {% render 'product-card',
+              product: product
+            %}
+          </div>
         {% endfor %}
+      </div>
+      <div
+        class="
+          x-flex x-flex-row x-w-full
+          x-justify-center
+          x-pt-30 md:x-pt-60
+        "
+      >
+        <img 
+          src="{{ "ArrowLeft.png" | asset_url }}"
+          class="x-cursor-pointer x-mr-2"
+          id="leafre-left-arrow-{{id}}"
+          onclick="moveLeft({{id}})"
+          width="auto"
+          height="auto"
+        />
+        <a href="{{ section.settings.collection.url }}">
+          <div
+            class="
+              x-flex x-flex-row x-items-center x-justify-center
+              x-px-6 x-py-3
+              x-rounded-lg
+              x-border x-border-buttongray
+              x-bg-white x-text-black x-text-12px
+              x-cursor-pointer
+            "
+          >VIEW ALL</div>
+        </a>
+        <img 
+          src="{{ "ArrowRight.png" | asset_url }}"
+          class="x-cursor-pointer x-ml-2"
+          id="leafre-right-arrow-{{id}}"
+          onclick="moveRight({{id}})"
+          width="auto"
+          height="auto"
+        />
+        <script>
+          function moveLeft(id) {
+            let el = document.getElementById("leafre-product-container-"+id)
+            let pel = document.getElementsByClassName("leafre-product-card")?.[0]
+            if (el) {
+              let style = pel.currentStyle || window.getComputedStyle(pel)
+              let margin = parseFloat(style.marginRight)
+              let width = (pel?.offsetWidth || 300) + margin
+              el.scrollTo({
+                behavior: 'smooth',
+                left: el.scrollLeft - width || 0
+              })
+            }
+          }
+          function moveRight(id) {
+            let el = document.getElementById("leafre-product-container-"+id)
+            let pel = document.getElementsByClassName("leafre-product-card")?.[0]
+            if (el) {
+              let style = pel.currentStyle || window.getComputedStyle(pel)
+              let margin = parseFloat(style.marginRight)
+              let width = (pel?.offsetWidth || 300) + margin
+              el.scrollTo({
+                behavior: 'smooth',
+                left: el.scrollLeft + width
+              })
+            }
+          }
+        </script>
       </div>
     </div>
   </div>
