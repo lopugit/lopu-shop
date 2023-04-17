@@ -50,6 +50,7 @@ const config = {
       purple: "#A416FD",
       white: "#FFFFFF",
       black: "#000000",
+      buttongray: "#CACACD",
       lightgray: "#E5E5E5",
       darkgray: "#2D2D2D",
       red: "#FF0000",

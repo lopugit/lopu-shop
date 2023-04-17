@@ -537,28 +537,8 @@ video {
   right: 0rem;
 }
 
-.x-left-0 {
-  left: 0rem;
-}
-
-.x-top-0 {
-  top: 0rem;
-}
-
 .x-z-40 {
   z-index: 40;
-}
-
-.x-z-0 {
-  z-index: 0;
-}
-
-.x-z-10 {
-  z-index: 10;
-}
-
-.x-z-20 {
-  z-index: 20;
 }
 
 .x-m-4 {
@@ -569,8 +549,16 @@ video {
   margin-bottom: 0.25rem;
 }
 
+.x-ml-2 {
+  margin-left: 0.5rem;
+}
+
 .x-mr-2 {
   margin-right: 0.5rem;
+}
+
+.x-mr-40px {
+  margin-right: 40px;
 }
 
 .x-mt-4 {
@@ -597,12 +585,8 @@ video {
   height: 100%;
 }
 
-.x-h-500px {
-  height: 500px;
-}
-
-.x-h-700px {
-  height: 700px;
+.x-w-1100px {
+  width: 1100px;
 }
 
 .x-w-120px {
@@ -638,6 +622,10 @@ video {
 }
 
 .x-flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.x-shrink-0 {
   flex-shrink: 0;
 }
 
@@ -682,6 +670,10 @@ video {
   overflow: scroll;
 }
 
+.x-overflow-x-scroll {
+  overflow-x: scroll;
+}
+
 .x-whitespace-nowrap {
   white-space: nowrap;
 }
@@ -702,9 +694,18 @@ video {
   border-width: 3px;
 }
 
+.x-border {
+  border-width: 1px;
+}
+
 .x-border-lightgray {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
+}
+
+.x-border-buttongray {
+  --tw-border-opacity: 1;
+  border-color: rgb(202 202 205 / var(--tw-border-opacity));
 }
 
 .x-bg-black {
@@ -773,8 +774,13 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.x-pb-60 {
-  padding-bottom: 15rem;
+.x-py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.x-pb-30 {
+  padding-bottom: 7.5rem;
 }
 
 .x-pl-1 {
@@ -797,12 +803,12 @@ video {
   padding-top: 7rem;
 }
 
-.x-pt-40 {
-  padding-top: 10rem;
+.x-pt-30 {
+  padding-top: 7.5rem;
 }
 
-.x-pt-60 {
-  padding-top: 15rem;
+.x-pt-40 {
+  padding-top: 10rem;
 }
 
 .x-font-magical {
@@ -819,6 +825,10 @@ video {
 
 .x-text-12px {
   font-size: 12px;
+}
+
+.x-text-50px {
+  font-size: 50px;
 }
 
 .x-text-90px {
@@ -852,6 +862,10 @@ video {
 .x-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.last\:x-mr-0:last-child {
+  margin-right: 0rem;
 }
 
 @media (min-width: 750px) {
@@ -893,6 +907,10 @@ video {
     padding-bottom: 2rem;
   }
 
+  .md\:x-pb-60 {
+    padding-bottom: 15rem;
+  }
+
   .md\:x-pt-14p {
     padding-top: 14%;
   }
@@ -903,6 +921,10 @@ video {
 
   .md\:x-pt-3p {
     padding-top: 3%;
+  }
+
+  .md\:x-pt-60 {
+    padding-top: 15rem;
   }
 
   .md\:x-text-110px {
