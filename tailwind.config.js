@@ -19,14 +19,30 @@ const config = {
       fontFamily: {
         'pixel': 'DePixelBreit',
         'zakum': 'Zakum',
+        'magical': 'Magical',
       },
       spacing: {}
+    },
+    borderWidth: {
+      DEFAULT: '1px',
+      0: '0',
+      1: '1px',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      5: '5px',
+      6: '6px',
+      7: '7px',
+      8: '8px',
+      9: '9px',
+      10: '10px',
     },
     colors: {
       yellow: "#FDE516",
       green: "#00FF00",
       green2: "#A2FB64",
       green3: "#45BF53",
+      green4: "#0E5803",
       lava: "#FF7B1C",
       lightbrown: "#FFD9A7",
       brown2: "#A76B40",
@@ -50,7 +66,7 @@ for (let i = 0; i <= 10; i++) {
   config.theme.extend.spacing[ii + 'p'] = i / 10 + '%'
   config.theme.extend.spacing[i + 'px'] = i + 'px'
 }
-for (let i = 0; i <= 100; i++) {
+for (let i = 0; i <= 500; i++) {
   config.theme.extend.spacing[i] = i * 0.25 + 'rem'
   config.theme.extend.spacing[i + 'vh'] = i + 'vh'
   config.theme.extend.spacing[i + 'vw'] = i + 'vw'

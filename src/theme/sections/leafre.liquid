@@ -1,0 +1,56 @@
+<div class="x-h-800px md:x-h-1100px x-overflow-hidden x-max-w-full x-flex x-relative x-items-center x-justify-center x-bg-black">
+  {% comment %} <img 
+    src="{{ "Leafre BG.png" | asset_url }}"
+    class=" x-object-cover x-h-full x-w-full"
+    width="auto"
+    height="auto"
+    /> {% endcomment %}
+  <img 
+    src="{{ "LeafreBackground.png" | asset_url }}"
+    class=" x-object-cover x-object-top x- x-h-full x-w-full"
+    width="auto"
+    height="auto"
+    />
+  <div class="x-absolute x-flex x-flex-row x-justify-center x-pt-40 xleft-0 xtop-0 x-w-full x-h-full">
+    <div class="x-flex x-flex-col x-max-w-full x-items-center">
+      <div 
+        style="text-shadow: 5px 5px 0px #0E5803"
+        class="x-font-magical x-text-90px md:x-text-120px x-text-white"
+      >Leafre</div>
+      <div class="
+        x-pt-12p md:x-pt-14p x-max-w-full
+        x-grid x-grid-cols-2 x-gap-x-10 x-gap-y-10
+        md:x-grid-cols-3 md:x-gap-y-40 md:x-gap-x-20
+      ">
+        {%- for product in section.settings.collection.products -%}
+          {% render 'product-card',
+            product: product
+          %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Leafre",
+  "tag": "section",
+  "class": "leafre-section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Leafre"
+    }
+  ]
+}
+{% endschema %}

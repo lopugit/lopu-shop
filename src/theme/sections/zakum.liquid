@@ -1,25 +1,49 @@
-<div class="x-h-800px md:x-h-1400px x-overflow-hidden x-max-w-full  x-flex x-relative x-justify-center x-bg-black">
-  <img 
-    src="{{ "Zakum Altar Extended.png" | asset_url }}"
-    class="x-object-cover x-object-top x-min-w-full x-min-h-full"
-    />
-  <div class="x-absolute x-flex x-px-8 x-flex-row x-justify-center x-pt-60 xleft-0 xtop-0 x-w-full x-h-full">
+<div 
+  class="
+    x-overflow-hidden x-max-w-full x-flex 
+    x-relative x-justify-center x-bg-black
+  "
+>
+  <div 
+    class="
+      x-absolute x-top-0 x-left-0 x-w-full x-h-700px
+      x-bg-top x-bg-no-repeat x-bg-cover
+      x-z-0
+    "
+    style="
+      background-image: url({{ "Zakum Altar Extended.png" | asset_url }});
+      image-rendering: pixelated;
+    "
+  >
+    <div 
+      class="
+        x-absolute x-top-0 x-left-0 x-w-full x-h-full
+        x-z-10
+        x-bg-top x-bg-no-repeat x-bg-cover
+      "
+      style="
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%);
+        image-rendering: pixelated;
+      "
+    >
+    </div>
+  </div>
+  <div class="x-z-20 x-flex x-px-8 x-flex-row x-justify-center x-pt-60 x-pb-60 x-w-full x-h-full">
     <div class="x-flex x-flex-col x-max-w-full x-items-center">
       <div 
         style="text-shadow: 10px 10px 0px #2E2E2E"
-        class="x-font-zakum x-text-90px md:x-text-150px x-text-white"
+        class="x-font-zakum x-text-90px md:x-text-120px lg:x-text-150px x-text-white"
       >ZAKUM</div>
 
       <div class="
-        x-flex x-flex-row x-pt-12p md:x-pt-20p 
-        x-max-w-full x-overflow-scroll
+        x-pt-12p md:x-pt-14p x-max-w-full
+        x-grid x-grid-cols-2 x-gap-x-10 x-gap-y-10
+        md:x-grid-cols-3 md:x-gap-y-40 md:x-gap-x-20
       ">
         {%- for product in section.settings.collection.products -%}
-          <div class="x-px-8 x-flex-shrink-0 x-w-80p md:x-w-auto">
-            {% render 'product-card',
-              product: product
-            %}
-          </div>
+          {% render 'product-card',
+            product: product
+          %}
         {% endfor %}
       </div>
     </div>
