@@ -25,7 +25,8 @@
           x-overflow-x-scroll
         "
       >
-        {%- for product in section.settings.collection.products -%}
+        {% assign products = section.settings.collection.products | sort: 'title' %}
+        {%- for product in products -%}
           <div
             class="
               zakum-product-card

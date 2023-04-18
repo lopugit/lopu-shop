@@ -73,6 +73,7 @@ for (let i = 0; i <= 500; i++) {
   config.theme.extend.spacing[i + 'vh'] = i + 'vh'
   config.theme.extend.spacing[i + 'vw'] = i + 'vw'
   config.theme.extend.spacing[i + 'p'] = i + '%'
+  config.theme.extend.spacing[i + 'px'] = i + 'px'
 }
 for (let i = 0; i <= 250; i++) {
   config.theme.extend.fontSize[i + 'px'] = i + 'px'

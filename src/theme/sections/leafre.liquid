@@ -12,7 +12,7 @@
   <div class="x-flex x-px-8 x-flex-row x-justify-center x-pt-30 md:x-pt-60 x-pb-30 md:x-pb-60 x-w-full x-h-full">
     <div class="x-flex x-flex-col x-max-w-full x-items-center">
       <div 
-        style="text-shadow: 10px 10px 0px #2E2E2E"
+        style="text-shadow: 5px 5px 0px #0E5803"
         class="x-font-magical x-text-50px md:x-text-70px x-text-white"
       >Leafre</div>
 
@@ -25,7 +25,8 @@
           x-overflow-x-scroll
         "
       >
-        {%- for product in section.settings.collection.products -%}
+        {% assign products = section.settings.collection.products | sort: 'title' %}
+        {%- for product in products -%}
           <div
             class="
               leafre-product-card
