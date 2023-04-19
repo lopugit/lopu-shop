@@ -6,16 +6,28 @@
         "collection": "zakum"
       }
     },
+    "70d20d19-4fed-40f4-86c8-c6a8becd4bdc": {
+      "type": "items",
+      "settings": {
+        "collection": "items"
+      }
+    },
     "0c875851-cd14-4d76-bedc-9f9c3c076cc9": {
       "type": "leafre",
       "settings": {
         "collection": "leafy"
       }
     },
+    "a5c45e6b-3988-49ad-917d-708a2dc14d3d": {
+      "type": "characters",
+      "settings": {
+        "collection": "characters"
+      }
+    },
     "92da3b57-8782-47fc-b3d0-bd49b0190b56": {
       "type": "grendel",
       "settings": {
-        "collection": ""
+        "collection": "grendel"
       }
     },
     "e99c037b-029a-4d6a-89bb-43b2b4049f77": {
@@ -27,7 +39,9 @@
   },
   "order": [
     "2fb8c7e8-a36a-4bea-a692-4fb521566180",
+    "70d20d19-4fed-40f4-86c8-c6a8becd4bdc",
     "0c875851-cd14-4d76-bedc-9f9c3c076cc9",
+    "a5c45e6b-3988-49ad-917d-708a2dc14d3d",
     "92da3b57-8782-47fc-b3d0-bd49b0190b56",
     "e99c037b-029a-4d6a-89bb-43b2b4049f77"
   ]

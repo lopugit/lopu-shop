@@ -1,24 +1,111 @@
-<div class="x-h-800px md:x-h-1100px x-overflow-hidden x-max-w-full x-flex x-relative x-items-center x-justify-center x-bg-black">
-  <img 
-    src="{{ "Orbis Boat Extended W Enemy.png" | asset_url }}"
-    class=" x-object-cover x-object-top x-h-full x-w-full"
-    width="auto"
-    height="auto"
-    />
-  <div class="x-absolute x-flex x-flex-row x-justify-center x-pt-28 xleft-0 xtop-0 x-w-full x-h-full">
+{% assign id = "now" | date: "%N" | modulo: 1000 | plus: 0 %}
+<div 
+  style="
+    background-image: url({{ "Orbis Boat Extended W Enemy.png" | asset_url }});
+    image-rendering: pixelated;"
+  class="
+    x-bg-top x-bg-no-repeat x-bg-cover
+    x-overflow-hidden x-max-w-full x-flex 
+    x-relative x-justify-center x-bg-black
+  "
+>
+  <div class="x-flex x-px-8 x-flex-row x-justify-center x-pt-30 md:x-pt-60 x-pb-30 md:x-pb-60 x-w-full x-h-full">
     <div class="x-flex x-flex-col x-max-w-full x-items-center">
-      <div class="x-font-orbis x-text-90px md:x-text-110px x-text-white">ORBIS</div>
-      <div class="
-        x-flex x-flex-row x-pt-25p md:x-pt-20p 
-        md:x-justify-center x-max-w-full x-overflow-scroll
-      ">
-        {%- for product in section.settings.collection.products -%}
-          <div class="x-px-8 x-flex-shrink-0 x-w-80p md:x-w-auto">
+      <div 
+        style="text-shadow: 10px 10px 0px #2E2E2E"
+        class="x-font-orbis x-text-50px md:x-text-70px x-text-white"
+      >Orbis</div>
+
+      <div 
+        id="orbis-product-container-{{id}}"
+        class="
+          x-flex x-flex-row
+          x-w-1100px
+          x-pt-30 md:x-pt-60 x-max-w-full
+          x-overflow-x-scroll
+        "
+      >
+        {% assign products = section.settings.collection.products | sort: 'title' %}
+        {%- for product in products -%}
+          <div
+            class="
+              orbis-product-card
+              x-max-w-full
+              x-w-80p md:x-w-300px
+              x-shrink-0
+              x-mr-40px
+              last:x-mr-0
+            "
+          >
             {% render 'product-card',
               product: product
             %}
           </div>
         {% endfor %}
+      </div>
+      <div
+        class="
+          x-flex x-flex-row x-w-full
+          x-justify-center
+          x-pt-30 md:x-pt-60
+        "
+      >
+        <img 
+          src="{{ "ArrowLeft.png" | asset_url }}"
+          class="x-cursor-pointer x-mr-2"
+          id="orbis-left-arrow-{{id}}"
+          onclick="moveLeftOrbis({{id}})"
+          width="auto"
+          height="auto"
+        />
+        <a href="{{ section.settings.collection.url }}">
+          <div
+            class="
+              x-flex x-flex-row x-items-center x-justify-center
+              x-px-6 x-py-3
+              x-rounded-lg
+              x-border x-border-buttongray
+              x-bg-white x-text-black x-text-12px
+              x-cursor-pointer
+            "
+          >VIEW ALL</div>
+        </a>
+        <img 
+          src="{{ "ArrowRight.png" | asset_url }}"
+          class="x-cursor-pointer x-ml-2"
+          id="orbis-right-arrow-{{id}}"
+          onclick="moveRightOrbis({{id}})"
+          width="auto"
+          height="auto"
+        />
+        <script>
+          function moveLeftOrbis(id) {
+            let el = document.getElementById("orbis-product-container-"+id)
+            let pel = document.getElementsByClassName("orbis-product-card")?.[0]
+            if (el) {
+              let style = pel.currentStyle || window.getComputedStyle(pel)
+              let margin = parseFloat(style.marginRight)
+              let width = (pel?.offsetWidth || 300) + margin
+              el.scrollTo({
+                behavior: 'smooth',
+                left: el.scrollLeft - width || 0
+              })
+            }
+          }
+          function moveRightOrbis(id) {
+            let el = document.getElementById("orbis-product-container-"+id)
+            let pel = document.getElementsByClassName("orbis-product-card")?.[0]
+            if (el) {
+              let style = pel.currentStyle || window.getComputedStyle(pel)
+              let margin = parseFloat(style.marginRight)
+              let width = (pel?.offsetWidth || 300) + margin
+              el.scrollTo({
+                behavior: 'smooth',
+                left: el.scrollLeft + width
+              })
+            }
+          }
+        </script>
       </div>
     </div>
   </div>
