@@ -8,28 +8,28 @@
         "footer-0": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "Products",
+            "menu": "main-menu"
           }
         },
-        "footer-1": {
-          "type": "link_list",
+        "1e5df0ec-b3b5-4124-86da-8eba418658a2": {
+          "type": "text",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "heading": "",
+            "subtext": ""
           }
         },
         "footer-2": {
           "type": "text",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "heading": "Welcome",
+            "subtext": "<p>I'd like to give you the warmest welcome to my shop. I hope you find what you're looking for and leave happy as can be!<br\/><br\/>Happy Shopping!<\/p><p>&lt;3<\/p>"
           }
         }
       },
       "block_order": [
         "footer-0",
-        "footer-1",
+        "1e5df0ec-b3b5-4124-86da-8eba418658a2",
         "footer-2"
       ],
       "settings": {

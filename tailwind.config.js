@@ -1,9 +1,9 @@
 const config = {
   prefix: 'x-',
   mode: 'jit',
-  corePlugins: {
-    preflight: false,
-  },
+  // corePlugins: {
+  //   preflight: false,
+  // },
   content: [
     './src/theme/layout/*.liquid',
     './src/theme/templates/*.liquid',
