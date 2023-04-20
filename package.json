@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pull": "cd src/theme && shopify theme pull --store lopu-shop",
-    "publish": "cd src/theme && shopify theme publish --store lopu-shop",
+    "pull": "shopify theme pull --store lopu-shop --path=src/theme",
+    "publish": "shopify theme publish --store lopu-shop",
     "push": "shopify theme push --store lopu-shop --path=src/theme",
     "dev": "npm run dev:tailwind & npm run dev:shopify",
     "dev:shopify": "shopify theme dev --store=lopu-shop --theme-editor-sync --path=src/theme",

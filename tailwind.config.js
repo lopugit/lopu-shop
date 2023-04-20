@@ -20,6 +20,7 @@ const config = {
         'pixel': 'DePixelBreit',
         'zakum': 'Zakum',
         'magical': 'Magical',
+        'grendel': 'Grendel'
       },
       spacing: {}
     },

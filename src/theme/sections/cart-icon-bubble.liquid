@@ -7,9 +7,9 @@
 -%}
 <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
 {%- if cart != empty -%}
-  <div class="cart-count-bubble">
+  <div class="x-absolute x-flex x-items-center x-justify-center x-bg-purple x-rounded-full x-h-15px x-w-15px x-left-10 x-top-2">
     {%- if cart.item_count < 100 -%}
-      <span aria-hidden="true">{{ cart.item_count }}</span>
+      <span aria-hidden="true" class="x-text-white x-text-sm">{{ cart.item_count }}</span>
     {%- endif -%}
     <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
   </div>

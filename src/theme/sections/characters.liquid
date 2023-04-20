@@ -4,7 +4,7 @@
     background-image: url({{ "Characters.jpeg" | asset_url }});
     image-rendering: pixelated;"
   class="
-    x-bg-top x-bg-no-repeat x-bg-cover
+    x-bg-center x-bg-no-repeat x-bg-cover
     x-overflow-hidden x-max-w-full x-flex 
     x-relative x-justify-center x-bg-black
   "
@@ -12,8 +12,18 @@
   <div class="x-flex x-px-8 x-flex-row x-justify-center x-pt-30 md:x-pt-60 x-pb-30 md:x-pb-60 x-w-full x-h-full">
     <div class="x-flex x-flex-col x-max-w-full x-items-center">
       <div 
-        style="text-shadow: 10px 10px 0px #2E2E2E"
-        class="x-font-characters x-text-50px md:x-text-70px x-text-white"
+        style="
+          text-shadow: 
+            -5px -5px 0px #2E2E2E, 
+            5px 5px 0px #2E2E2E, 
+            0px 5px 0px #2E2E2E, 
+            -5px 5px 0px #2E2E2E, 
+            5px -5px 0px #2E2E2E,
+            -5px 0px 0px #2E2E2E, 
+            5px -0px 0px #2E2E2E,
+            0px -5px 0px #2E2E2E
+        "
+        class="x-font-characters x-text-40px md:x-text-70px x-text-white"
       >Characters</div>
 
       <div 

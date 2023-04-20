@@ -6,10 +6,98 @@
         "collection": "zakum"
       }
     },
+    "d47a0865-d7aa-4468-8677-ecd8101d4a66": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18708315177259__d47a0865-d7aa-4468-8677-ecd8101d4a66-16819807987980ded3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Premium Quality",
+            "heading_size": "h1"
+          }
+        },
+        "template--18708315177259__d47a0865-d7aa-4468-8677-ecd8101d4a66-16819807987980ded3-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We use only the highest quality tee's available.<\/p><p>210 GSM (That's high!)<br\/>Heavy Weight <br\/>100% Cotton<br\/>Box Fit<br\/>Thicc Collar<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--18708315177259__d47a0865-d7aa-4468-8677-ecd8101d4a66-16819807987980ded3-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get this Tee",
+            "button_link": "shopify:\/\/products\/maplestory-zakum-collectors-edition"
+          }
+        }
+      },
+      "block_order": [
+        "template--18708315177259__d47a0865-d7aa-4468-8677-ecd8101d4a66-16819807987980ded3-0",
+        "template--18708315177259__d47a0865-d7aa-4468-8677-ecd8101d4a66-16819807987980ded3-1",
+        "template--18708315177259__d47a0865-d7aa-4468-8677-ecd8101d4a66-16819807987980ded3-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Gildan_Mockup.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "70d20d19-4fed-40f4-86c8-c6a8becd4bdc": {
       "type": "items",
       "settings": {
         "collection": "items"
+      }
+    },
+    "82788446-208b-48be-b655-cd9cd933a977": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--18708315177259__82788446-208b-48be-b655-cd9cd933a977-16819807987980ded3-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Direct To Garment",
+            "heading_size": "h1"
+          }
+        },
+        "template--18708315177259__82788446-208b-48be-b655-cd9cd933a977-16819807987980ded3-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>No Peel<\/p><p>No Fade<\/p><p>Ultra High Quality Pixel Art<\/p><p>Front \/ Back \/ Left \/ Right Styles<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--18708315177259__82788446-208b-48be-b655-cd9cd933a977-16819807987980ded3-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Zakum",
+            "button_link": "shopify:\/\/collections\/zakum"
+          }
+        }
+      },
+      "block_order": [
+        "template--18708315177259__82788446-208b-48be-b655-cd9cd933a977-16819807987980ded3-0",
+        "template--18708315177259__82788446-208b-48be-b655-cd9cd933a977-16819807987980ded3-1",
+        "template--18708315177259__82788446-208b-48be-b655-cd9cd933a977-16819807987980ded3-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Gildan_Mockup_Close_Up.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "0c875851-cd14-4d76-bedc-9f9c3c076cc9": {
@@ -29,20 +117,15 @@
       "settings": {
         "collection": "grendel"
       }
-    },
-    "e99c037b-029a-4d6a-89bb-43b2b4049f77": {
-      "type": "orbis",
-      "settings": {
-        "collection": ""
-      }
     }
   },
   "order": [
     "2fb8c7e8-a36a-4bea-a692-4fb521566180",
+    "d47a0865-d7aa-4468-8677-ecd8101d4a66",
     "70d20d19-4fed-40f4-86c8-c6a8becd4bdc",
+    "82788446-208b-48be-b655-cd9cd933a977",
     "0c875851-cd14-4d76-bedc-9f9c3c076cc9",
     "a5c45e6b-3988-49ad-917d-708a2dc14d3d",
-    "92da3b57-8782-47fc-b3d0-bd49b0190b56",
-    "e99c037b-029a-4d6a-89bb-43b2b4049f77"
+    "92da3b57-8782-47fc-b3d0-bd49b0190b56"
   ]
 }
